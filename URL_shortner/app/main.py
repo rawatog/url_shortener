@@ -32,7 +32,8 @@ def home(request: Request):
 # API endpoints remain the same
 @app.post("/shorten", response_model=schemas.URLResponse)
 def shorten_url(url: schemas.URLCreate, db: Session = Depends(get_db)):
-    return crud.create_short_url(db, url.original_url)
+    return crud.create_short_url(db, str(url.original_url))
+
 
 @app.get("/{short_code}")
 def redirect_url(short_code: str, db: Session = Depends(get_db)):
