@@ -28,7 +28,7 @@ A simple and scalable URL shortening service built using **FastAPI**, **Jinja2 t
 ---
 
 ## 📁 Project Structure
-url-shortener/
+```url-shortener/
 │
 ├── app/
 │   ├── main.py              # FastAPI entrypoint
@@ -55,3 +55,27 @@ url-shortener/
 ├── Dockerfile             # Container definition
 ├── README.md              # Project documentation
 └── .env                   # Environment variables
+```
+
+---
+
+## ⚙️ Setup & Installation
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/url-shortener.git
+cd url-shortener
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
+# Install dependencies
+pip install -r requirements.txt
+# Run the application
+uvicorn app.main:app --reload
+
+
+☸️ Kubernetes Deployment
+Apply manifests
+kubectl apply -f k8s/
