@@ -31,23 +31,27 @@ A simple and scalable URL shortening service built using **FastAPI**, **Jinja2 t
 url-shortener/
 │
 ├── app/
-│ ├── main.py # FastAPI entrypoint
-│ ├── models.py # Database models
-│ ├── schemas.py # Pydantic schemas
-│ ├── database.py # DB connection setup
-│ ├── crud.py # DB operations
-│ ├── templates/ # Jinja2 HTML templates
-│ │ ├── index.html
-│ │ └── result.html
-│ ├── static/ # CSS/JS files
+│   ├── main.py              # FastAPI entrypoint
+│   ├── models.py           # Database models
+│   ├── schemas.py          # Pydantic schemas
+│   ├── database.py         # DB connection setup
+│   ├── crud.py             # Database operations
+│   │
+│   ├── templates/          # Jinja2 HTML templates
+│   │   ├── index.html
+│   │   └── result.html
+│   │
+│   └── static/             # CSS / JS files
+│       ├── style.css
+│       └── script.js
 │
-├── k8s/
-│ ├── deployment.yaml
-│ ├── service.yaml 
-│ ├── configmap.yaml
-│ ├── ingress.yaml  
+├── k8s/                    # Kubernetes manifests
+│   ├── deployment.yaml
+│   ├── service.yaml
+│   ├── configmap.yaml
+│   └── ingress.yaml
 │
-├── requirements.txt
-├── Dockerfile
-├── README.md
-└── .env
+├── requirements.txt       # Python dependencies
+├── Dockerfile             # Container definition
+├── README.md              # Project documentation
+└── .env                   # Environment variables
